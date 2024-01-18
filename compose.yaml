@@ -1,0 +1,16 @@
+version: "3"
+services:
+  next:
+    build:
+      context: .
+      dockerfile: ./build/next/Dockerfile
+      args:
+        - APPNAME=myapp
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./next/app:/app"
+    environment:
+     - WATCHPACK_POLLING=true
+    tty: true
+    stdin_open: true
