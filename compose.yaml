@@ -9,7 +9,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - "./next/app:/app"
+      - "./app:/app"
     environment:
      - WATCHPACK_POLLING=true
     tty: true
